@@ -44,7 +44,8 @@ foreach ($providers as $provider => $settings) {
 						));
 			}
 
-			echo elgg_view_module('info', $title, $mod);
+			echo '<div class="hybridauth-user-account-settings">'.elgg_view_module('info', $title, $mod).'</div>';
 		}
 	}
 }
+echo '<div class="clearfix"> </div>';
