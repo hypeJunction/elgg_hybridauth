@@ -59,5 +59,14 @@
 		border:1px solid #e8e8e8;
 		background:#f4f4f4;
 	}
+	.hybridauth-user-account-settings {
+		text-align:justify; 
+		padding:10px; 
+		float:left; 
+		width:222px; 
+		height:120px; 
+		overflow:hidden;
+	}
+	
 
 	<?php if (FALSE) : ?></style><?php endif; ?>
