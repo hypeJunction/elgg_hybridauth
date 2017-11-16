@@ -133,6 +133,23 @@ function elgg_hybridauth_config($hook, $type, $return, $params) {
 		'debug_file' => elgg_get_config('dataroot') . 'elgg_hybridauth_debug',
 		'providers' => unserialize(elgg_get_plugin_setting('providers', 'elgg_hybridauth'))
 	);
+	
+	/* Use static file config if set
+	 * Sets providers key/id and secret if defined (overrides plugin settings)
+	 * Currently handles keys only, as other settings contain no sensitive information
+	 */
+	$settings_file = dirname(__FILE__).'/settings.php';
+	if (file_exists($settings_file)) {
+		include_once($settings_file);
+		foreach ($static_settings['providers'] as $provider => $settings) {
+			if (isset($settings['keys'])) {
+				foreach ($settings['keys'] as $key_name => $key_value) {
+					if (!empty($key_value)) { $defaults['providers'][$provider]['keys'][$key_name] = $key_value; }
+					if ($key_value === false) { unset($defaults['providers'][$provider]['keys'][$key_name]); }
+				}
+			}
+		}
+	}
 
 	$return = array_merge($defaults, $return);
 

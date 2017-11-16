@@ -12,3 +12,5 @@ robots.txt
 composer.lock
 Gemfile.lock
 .env
+/settings.php
+

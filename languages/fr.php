@@ -53,8 +53,8 @@ return array(
 	'hybridauth:persistent_session:disable' => "Désactivé",
 
 	'hybridauth:provider:enable' => "Activer ce fournisseur d'identité",
-	'hybridauth:provider:enabled' => "Activer",
-	'hybridauth:provider:disabled' => "Désactiver",
+	'hybridauth:provider:enabled' => "Activé",
+	'hybridauth:provider:disabled' => "Désactivé",
 
 	'hybridauth:provider:id' => "ID du fournisseur",
 	'hybridauth:provider:key' => "Clef publique",
@@ -125,8 +125,8 @@ return array(
 	'hybridauth:accounts' => "Comptes sociaux connectés",
 
 	'hybridauth:public_auth' => "Activer la connexion et l'inscription avec les fournisseurs sociaux (étendre les formulaires) pour les utilisateurs non connectés",
-	'hybridauth:public_auth:disable' => "Désactiver",
-	'hybridauth:public_auth:enable' => "Activer",
+	'hybridauth:public_auth:disable' => "Désactivé",
+	'hybridauth:public_auth:enable' => "Activé",
 
 	'hybridauth:provider:openid:name' => "Fournisseur OpenID",
 	'hybridauth:provider:openid:name:help' => "Nom du fournisseur OpenID (par ex. StackExchange)",
