@@ -81,7 +81,7 @@ function elgg_hybridauth_page_handler($segments, $identifier) {
 	switch ($segments[0]) {
 
 		case 'authenticate' :
-			$persistent = get_input('persistent', false);
+			$persistent = (bool)get_input('persistent', false);
 			echo elgg_view('resources/hybridauth/authenticate', ['persistent' => $persistent]);
 			return true;
 
